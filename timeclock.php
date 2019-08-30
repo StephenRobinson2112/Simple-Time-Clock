@@ -56,8 +56,8 @@ do {
 
 // If the employee does not have a record for the current week, create a blank record for employee.
 if (($x == 1) && (!$NameOnRecord)) {
-	$sql = "INSERT INTO datbasename.TimeClock (Date,Name) VALUES ('" . $time . "','" . $name . "')";
-	mysql_query($sql) or die(mysql_error());
+	$sql = "INSERT INTO TimeClock (Date,Name) VALUES ('" . $time . "','" . $name . "')";
+	mysqli_query($conn,$sql) or die(mysql_error());
 	echo "<script>location.reload(true);</script>";
 }
 $conn->close();
@@ -71,7 +71,7 @@ $conn->close();
 <link rel="stylesheet" href="../css/bootstrap.min.css">
 <script src="../js/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-<head></head>
+<head> <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"> </head>
 <body onload="startTime()">
 	<div class="container-fluid">
 		<form class="form-horizontal"  action="submit-time.php" method="post">
@@ -81,19 +81,19 @@ $conn->close();
 	   		<div align="center">
 			
 				<!-- Check if employee has already recorded any times for today, if so, don't show button. -->
-				<?php if ($DayIN == "0000-00-00 00:00:00") {
+				<?php if ($DayIN == "") {
 					echo "<button id='TimeIN-btn' style='width:200px; height:200px; margin:20px; font-size:30pt;' name='TimeIN-btn' class='btn btn-success' value='-IN'>Time<br />IN</button>";
 				} ?>
-				<?php if ($LunchOUT == "0000-00-00 00:00:00") {
+				<?php if ($LunchOUT == "") {
 					echo "<button id='LunchOUT-btn' style='width:200px; height:200px; margin:20px; font-size:30pt;' name='LunchOUT-btn' class='btn btn-danger' value='-L-OUT'>Lunch<br />OUT</button>";
 				} ?>
-				<?php if ($LunchIN == "0000-00-00 00:00:00") {
+				<?php if ($LunchIN == "") {
 					echo "<button id='LunchIN-btn' style='width:200px; height:200px; margin:20px; font-size:30pt;' name='LunchIN-btn' class='btn btn-success' value='-L-IN'>Lunch<br />IN</button>";
 				} ?>
-				<?php if ($DayOUT == "0000-00-00 00:00:00") {
+				<?php if ($DayOUT == "") {
 					echo "<button id='TimeOUT-btn' style='width:200px; height:200px; margin:20px; font-size:30pt;' name='TimeOUT-btn' class='btn btn-danger' value='-OUT'>Time<br />OUT</button>";
 				} ?>
-				<?php if (((($DayIN != "0000-00-00 00:00:00") && ($LunchOUT != "0000-00-00 00:00:00") && ($LunchIN != "0000-00-00 00:00:00") && ($DayOUT != "0000-00-00 00:00:00")))) {
+				<?php if (((($DayIN != "") && ($LunchOUT != "") && ($LunchIN != "") && ($DayOUT != "")))) {
 					echo "<h1 align='center' style='font-size:30pt;'>Your Time Card is full for today.<br />Enjoy the rest of your day!</h1>";
 				} ?>
 			
