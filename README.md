@@ -1,6 +1,8 @@
 # Simple-Time-Clock
 A simple time clock made using PHP and MYSQL on a Debian server to automate the rather archaic process of having employees punch in with physical cards and then having to manually calculate the hours each week. The input device for the time clock is a 7" android tablet, running the browser fullscreen.
 
+CSS has been updated to allow easier use on smaller or bigger screens. This timeclock also has logic that only shows pertinent buttons after punching in. (It wont allow you to punch in after punching out. ETC.) This is by no means perfect. But is a great base to build on for your own projects.
+
 Time Clock login page.
 https://i.imgur.com/s6MN0oF.png
 
@@ -23,7 +25,7 @@ You NEED to fill the table with 0's before the PHP will read the data correctly.
 2. ``insert into Employees (ID, Name, EmployeeID)  values ('ID NUMBER', 'EMPLOYEE FULL NAME', 'EMPLOYEE ID NUMBER');``
 That is to enter in a new employee. 
 
-3. ``UPDATE `TimeClock` SET `FRI-IN`='0000-00-0 0000:00' WHERE Name='EMPLOYEE FULL NAME';``
+3. ``UPDATE `TimeClock` SET `FRI-IN`='0000-00-00 00:00:00' WHERE Name='EMPLOYEE FULL NAME';``
 AFTER CHANGING DAY AND TIME. This will allow you to modify punches if need be. 
 
 I have not tested any of the following first hand. It is left over documentation from the original project. 
