@@ -23,7 +23,7 @@ You NEED to fill the table with 0's before the PHP will read the data correctly.
 2. ``insert into Employees (ID, Name, EmployeeID)  values ('ID NUMBER', 'EMPLOYEE FULL NAME', 'EMPLOYEE ID NUMBER');``
 That is to enter in a new employee. 
 
-3 ``UPDATE `TimeClock` SET `FRI-IN`='0000-00-0 0000:00' WHERE Name='EMPLOYEE FULL NAME';``
+3. ``UPDATE `TimeClock` SET `FRI-IN`='0000-00-0 0000:00' WHERE Name='EMPLOYEE FULL NAME';``
 AFTER CHANGING DAY AND TIME. This will allow you to modify punches if need be. 
 
 I have not tested any of the following first hand. It is left over documentation from the original project. 
