@@ -2,11 +2,10 @@
 A simple time clock made using PHP and MYSQL on a Debian server to automate the rather archaic process of having employees punch in with physical cards and then having to manually calculate the hours each week. The input device for the time clock is a 7" android tablet, running the browser fullscreen.
 
 #Time Clock login page.
-![img]https://i.imgur.com/s6MN0oF.png[/img] "Time Clock Main Screen")
+https://i.imgur.com/s6MN0oF.png
 
 #Employee punch in/out page.
-![employeescreen](http://salloiacono.com/wp-content/uploads/2016/02/time-clock-punch-in.png "Time Clock Punch In/Out Screen")
-
+https://i.imgur.com/HSv5qmB.png
 
 
 #The MYSQL database contains two tables:
