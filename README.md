@@ -13,7 +13,7 @@ https://i.imgur.com/HSv5qmB.png
 The MYSQL database contains two tables:
 
 1. Employees. Which houses your names, and their respective login ID's. 
-``insert into Employees (ID, Name, EmployeeID)``
+``create table Employees (ID VARCHAR(20), Name VARCHAR(20), EmployeeID VARCHAR(20));``
 
 2. TimeClock. Which houses the actual punch information for your week.``create table TimeClock (ID VARCHAR(20), Timestamp VARCHAR(20), Date VARCHAR(20), Name VARCHAR(20), `MON-IN` VARCHAR(20), `MON-L-OUT` VARCHAR(20), `MON-L-IN` VARCHAR(20), `MON-OUT` VARCHAR(20), `TUE-IN` VARCHAR(20), `TUE-L-OUT` VARCHAR(20), `TUE-L-IN` VARCHAR(20), `TUE-OUT` VARCHAR(20), `WED-IN` VARCHAR(20), `WED-L-OUT` VARCHAR(20), `WED-L-IN` VARCHAR(20), `WED-OUT` VARCHAR(20), `THU-IN` VARCHAR(20), `THU-L-OUT` VARCHAR(20), `THU-L-IN` VARCHAR(20), `THU-OUT` VARCHAR(20), `FRI-IN` VARCHAR(20), `FRI-L-OUT` VARCHAR(20), `FRI-L-IN` VARCHAR(20), `FRI-OUT` VARCHAR(20), `SAT-IN` VARCHAR(20), `SAT-L-OUT` VARCHAR(20), `SAT-L-IN` VARCHAR(20), `SAT-OUT` VARCHAR(20), `SUN-IN` VARCHAR(20),`SUN-L-OUT` VARCHAR(20), `SUN-L-IN` VARCHAR(20), `SUN-OUT` VARCHAR(20));``
 
