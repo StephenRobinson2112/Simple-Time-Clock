@@ -1,5 +1,5 @@
 # Simple-Time-Clock
-A simple time clock made using PHP and MYSQL on a Debian server to automate the rather archaic process of having employees punch in with physical cards and then having to manually calculate the hours each week. The input device for the time clock is a 7" android tablet, running the browser fullscreen.
+A simple time clock made using PHP and MYSQL on a Debian server to automate the rather archaic process of having employees punch in with physical cards and then having to manually calculate the hours each week. The page will be mostly resizable and usable on a variety of devices. Primarily aimed towards mobile users. My test machine being a Samsung Galaxy S9. 
 
 CSS has been updated to allow easier use on smaller or bigger screens. This timeclock also has logic that only shows pertinent buttons after punching in. (It wont allow you to punch in after punching out. ETC.) This is by no means perfect. But is a great base to build on for your own projects.
 
