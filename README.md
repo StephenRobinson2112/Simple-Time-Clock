@@ -19,14 +19,14 @@ The MYSQL database contains two tables:
 
 You will need to fill the table with 0's before using any login information. To enter information into these tables you have 2 major commands.
 
-1. ``UPDATE `TimeClock` SET `MON-IN`='0000-00-00 00:00:00',`MON-L-OUT`='0000-00-00 00:00:00',`MON-L-IN`='0000-00-00 00:00:00',`MON-OUT`='0000-00-00 00:00:00',`TUE-IN`='0000-00-00 00:00:00',`TUE-L-OUT`='0000-00-00 00:00:00',`TUE-L-IN`='0000-00-00 00:00:00',`TUE-OUT`='0000-00-00 00:00:00',`WED-IN`='0000-00-00 00:00:00',`WED-L-OUT`='0000-00-00 00:00:00',`WED-L-IN`='0000-00-00 00:00:00',`WED-OUT`='0000-00-00 00:00:00',`THU-IN`='0000-00-00 00:00:00',`THU-L-OUT`='0000-00-00 00:00:00',`THU-L-IN`='0000-00-00 00:00:00',`THU-OUT`='0000-00-00 00:00:00',`FRI-IN`='0000-00-00 00:00:00',`FRI-L-OUT`='0000-00-00 00:00:00',`FRI-L-IN`='0000-00-00 00:00:00',`FRI-OUT`='0000-00-00 00:00:00',`SAT-IN`='0000-00-00 00:00:00',`SAT-L-OUT`='0000-00-00 00:00:00',`SAT-L-IN`='0000-00-00 00:00:00',`SAT-OUT`='0000-00-00 00:00:00',`SUN-IN`='0000-00-00 00:00:00',`SUN-L-OUT`='0000-00-00 00:00:00',`SUN-L-IN`='0000-00-00 00:00:00',`SUN-OUT`='0000-00-00 00:00:00' WHERE 1;``
-You NEED to fill the table with 0's before the PHP will read the data correctly. I belive running the phyton script will do the same thing. But I have not tested this old script first hand. 
 
-2. ``insert into Employees (ID, Name, EmployeeID)  values ('ID NUMBER', 'EMPLOYEE FULL NAME', 'EMPLOYEE ID NUMBER');``
+1. ``insert into Employees (ID, Name, EmployeeID)  values ('ID NUMBER', 'EMPLOYEE FULL NAME', 'EMPLOYEE ID NUMBER');``
 That is to enter in a new employee. 
 
-3. ``UPDATE `TimeClock` SET `FRI-IN`='0000-00-00 00:00:00' WHERE Name='EMPLOYEE FULL NAME';``
+2. ``UPDATE `TimeClock` SET `FRI-IN`='0000-00-00 00:00:00' WHERE Name='EMPLOYEE FULL NAME';``
 AFTER CHANGING DAY AND TIME. This will allow you to modify punches if need be. 
+
+You will have to actually LOG IN with the user ID before it populates on any of the reports. 
 
 I have not tested any of the following first hand. It is left over documentation from the original project. 
 
